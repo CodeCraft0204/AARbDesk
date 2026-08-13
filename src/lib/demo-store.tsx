@@ -217,8 +217,8 @@ export function DemoProvider({ children }: { children: ReactNode }) {
         deadline,
         originalExposure: amount,
         currentExposure: amount,
-        assignedUserId: "stephanie",
-        assignedTo: "Stephanie Smith",
+        assignedUserId: "dan",
+        assignedTo: "Dan Hulse",
         createdAt: receivedAt,
         updatedAt: receivedAt,
         notes: [],
@@ -252,7 +252,7 @@ export function DemoProvider({ children }: { children: ReactNode }) {
           ...(attachments.length
             ? [{ id: `${id}-t5`, at: receivedAt, kind: "document" as const, title: `${attachments.length} original attachments preserved`, items: attachments }]
             : []),
-          { id: `${id}-t6`, at: receivedAt, kind: "assignment", title: "Case assigned to Stephanie Smith" },
+          { id: `${id}-t6`, at: receivedAt, kind: "assignment", title: "Case assigned to Dan Hulse" },
         ],
         messages: [
           {
@@ -269,8 +269,8 @@ export function DemoProvider({ children }: { children: ReactNode }) {
         ],
         offers: [{ id: `${id}-o1`, at: receivedAt, party: "buyer", label: "Buyer Demand", amount }],
         tasks: [
-          { id: `${id}-k1`, title: "Review condition report", due: deadline, owner: "Stephanie Smith", priority: "high", status: "open" },
-          { id: `${id}-k2`, title: "Prepare seller response", due: deadline, owner: "Stephanie Smith", priority: "high", status: "open" },
+          { id: `${id}-k1`, title: "Review condition report", due: deadline, owner: "Dan Hulse", priority: "high", status: "open" },
+          { id: `${id}-k2`, title: "Prepare seller response", due: deadline, owner: "Dan Hulse", priority: "high", status: "open" },
         ],
         deadlines: [
           {
@@ -278,7 +278,7 @@ export function DemoProvider({ children }: { children: ReactNode }) {
             type: "Seller Initial Response",
             source: "Auction notice",
             due: deadline,
-            owner: "Stephanie Smith",
+            owner: "Dan Hulse",
             status: "open",
             priority: "high",
             escalation: "Manager notified 12 hours before due",

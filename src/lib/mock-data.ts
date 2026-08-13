@@ -25,7 +25,8 @@ export const LOCATIONS: Location[] = [
 ]
 
 export const USERS: AppUser[] = [
-  { id: "stephanie", organizationId: ORGANIZATION.id, locationId: "loc-atl-n", name: "Stephanie Smith", role: "Arbitration Specialist", initials: "SS", email: "stephanie@premier.example", activeCases: 11, status: "active" },
+  { id: "dan", organizationId: ORGANIZATION.id, locationId: "loc-atl-n", name: "Dan Hulse", role: "Arbitration Specialist", initials: "DH", email: "dan@premier.example", activeCases: 11, status: "active" },
+  { id: "stephanie", organizationId: ORGANIZATION.id, locationId: "loc-atl-n", name: "Stephanie Smith", role: "Arbitration Specialist", initials: "SS", email: "stephanie@premier.example", activeCases: 9, status: "active" },
   { id: "marcus", organizationId: ORGANIZATION.id, locationId: "loc-dal", name: "Marcus Chen", role: "Arbitration Specialist", initials: "MC", email: "marcus@premier.example", activeCases: 8, status: "active" },
   { id: "priya", organizationId: ORGANIZATION.id, locationId: "loc-atl-n", name: "Priya Patel", role: "Arbitration Manager", initials: "PP", email: "priya@premier.example", activeCases: 6, status: "active" },
   { id: "daniel", organizationId: ORGANIZATION.id, locationId: "loc-nash", name: "Daniel Okonkwo", role: "Arbitration Specialist", initials: "DO", email: "daniel@premier.example", activeCases: 7, status: "away" },
@@ -83,7 +84,7 @@ function docs(list: Omit<CaseDocument, "origin" | "uploadedBy" | "version">[], o
   return list.map((item) => ({
     ...item,
     origin,
-    uploadedBy: origin === "original" ? "Inbound email" : "Stephanie Smith",
+    uploadedBy: origin === "original" ? "Inbound email" : "Dan Hulse",
     version: "1.0",
   }))
 }
@@ -339,8 +340,8 @@ export const INITIAL_CASES: ArbitrationCase[] = [
     deadline: "2026-08-13T17:00:00-04:00",
     originalExposure: 2100,
     currentExposure: 2100,
-    assignedUserId: "stephanie",
-    assignedTo: "Stephanie Smith",
+    assignedUserId: "dan",
+    assignedTo: "Dan Hulse",
     createdAt: "2026-08-12T14:21:00-04:00",
     updatedAt: "2026-08-13T08:15:00-04:00",
     notes: ["Need to confirm whether CEL was announced. Deadline is today."],
@@ -359,10 +360,10 @@ export const INITIAL_CASES: ArbitrationCase[] = [
     ],
     offers: [{ id: "o11", at: "2026-08-12T14:20:00-04:00", party: "buyer", label: "Buyer Demand", amount: 2100 }],
     tasks: [
-      { id: "k5", title: "Prepare seller response", due: "2026-08-13T17:00:00-04:00", owner: "Stephanie Smith", priority: "critical", status: "open" },
-      { id: "k5b", title: "Compare announcement", due: "2026-08-13T15:00:00-04:00", owner: "Stephanie Smith", priority: "high", status: "in_progress" },
+      { id: "k5", title: "Prepare seller response", due: "2026-08-13T17:00:00-04:00", owner: "Dan Hulse", priority: "critical", status: "open" },
+      { id: "k5b", title: "Compare announcement", due: "2026-08-13T15:00:00-04:00", owner: "Dan Hulse", priority: "high", status: "in_progress" },
     ],
-    deadlines: responseDeadline("2026-08-13T17:00:00-04:00", "Stephanie Smith"),
+    deadlines: responseDeadline("2026-08-13T17:00:00-04:00", "Dan Hulse"),
     financials: {
       originalDemand: 2100,
       currentExposure: 2100,

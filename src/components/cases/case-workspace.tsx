@@ -298,7 +298,7 @@ function CommunicationsTab({ item }: { item: ArbitrationCase }) {
                 at: new Date().toISOString(),
                 channel,
                 direction: "out",
-                from: "Stephanie Smith",
+                from: "Dan Hulse",
                 to: channel === "internal" ? "Premier Automotive Group" : item.auctionContact,
                 subject: `Re: ${item.caseNumber}`,
                 preview: body.slice(0, 120),
